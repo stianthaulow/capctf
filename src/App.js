@@ -1,37 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import copy from "copy-to-clipboard";
-
+import { useState } from "react";
 import "./App.css";
+import Formatter from "./components/Formatter";
+import Scratchpad from "./components/Scratchpad";
+import XOR from "./components/XOR";
 
 function App() {
-  const workspaceRef = useRef();
-
-  const [output, setOutput] = useState("capctf{}");
-
-  const handleChange = (e) => {
-    const value = e.target.value
-      .replace(/ /g, "_")
-      .replace(/[^A-Za-z0-9_]/g, "")
-      .toLowerCase();
-    setOutput(`capctf{${value}}`);
-    copy(value);
-  };
-
-  useEffect(() => {
-    workspaceRef.current.focus();
-  }, []);
+  const [input, setInput] = useState("");
   return (
     <div className="App">
       <header className="App-header">
         <h1>CapCTF</h1>
       </header>
       <main>
-        <textarea
-          className="workspace"
-          ref={workspaceRef}
-          onChange={handleChange}
-        ></textarea>
-        <div className="output">{output}</div>
+        <Scratchpad setInput={setInput} />
+        <Formatter input={input} setInput={setInput} />
+        <XOR />
       </main>
     </div>
   );

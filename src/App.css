@@ -3,17 +3,44 @@
   margin: 10px auto;
 }
 
-.workspace {
+.scratchpad {
+  width: 100%;
+  border-radius: 5px;
   background-color: #383c44;
   padding: 0.3rem;
-  border-radius: 5px;
   border: none;
   color: #eee;
-  width: 100%;
+  font-size: 0.7rem;
+  margin: 0.5rem;
   height: 10rem;
-  font-size: 20px;
+}
+
+.formatter {
+  width: 100%;
 }
 
 .output {
   margin-top: 1rem;
+}
+
+.history-button {
+  border: none;
+  border-radius: 0;
+  color: #eee;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+  margin-bottom: 0.3rem;
+}
+
+.xor {
+  margin-top: 1rem;
+}
+
+.xor-heading {
+  display: inline;
+}
+
+.pipe {
+  margin-right: 0.8rem;
+  color: #363c47;
 }
