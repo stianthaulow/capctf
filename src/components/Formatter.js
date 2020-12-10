@@ -39,14 +39,17 @@ function Formatter({ input, setInput }) {
   return (
     <>
       <div className="output">{output()}</div>
-      <input
-        value={input}
-        className="formatter"
-        ref={formatterRef}
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-        placeholder="flag..."
-      />
+      <div className="input-container">
+        <input
+          value={input}
+          className="formatter"
+          ref={formatterRef}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          placeholder="flag..."
+        />
+        <span className="input-lenght">{input.length}</span>
+      </div>
       <div className="history">
         {history.map((flag, i) => (
           <div key={i}>

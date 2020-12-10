@@ -15,8 +15,16 @@
   height: 10rem;
 }
 
+.input-container {
+  display: flex;
+}
+
 .formatter {
-  width: 100%;
+  flex: 1;
+}
+
+.input-length {
+  line-height: 3rem;
 }
 
 .output {
@@ -26,6 +34,7 @@
 .history-button {
   border: none;
   border-radius: 0;
+  background: transparent;
   color: #eee;
   font-size: 1rem;
   padding: 0.2rem 0;
