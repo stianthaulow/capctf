@@ -48,7 +48,7 @@ function Formatter({ input, setInput }) {
           onKeyDown={handleKeyDown}
           placeholder="flag..."
         />
-        <span className="input-lenght">{input.length}</span>
+        <span className="input-length">{input.length}</span>
       </div>
       <div className="history">
         {history.map((flag, i) => (
